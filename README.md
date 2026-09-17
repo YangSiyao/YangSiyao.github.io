@@ -1,16 +1,16 @@
 # Siyao Yang | 杨斯尧 — GitHub Pages 个人学术主页
 
-这是从现有 Google Sites 内容重建的静态网站，包含首页、论文页和教学页。保留原站英文内容与三个栏目，不要求安装 Node.js、Ruby、Jekyll 或其他构建工具。
+这是从现有 Google Sites 内容重建的静态网站，包含首页、论文页和教学页。不要求安装 Node.js、Ruby、Jekyll 或其他构建工具。
 
-网站文件已经生成，但尚未发布到任何 GitHub 账户。本包不包含账号凭据，也不绑定任何假定的 GitHub 用户名。
+网站地址：https://yangsiyao.github.io/ 。源代码：https://github.com/YangSiyao/YangSiyao.github.io 。本包不包含账号凭据。
 
 ## 1. 本地预览
 
 解压压缩包后，双击 `index.html` 即可在浏览器中查看；顶部导航可以打开另外两个页面。请保持 `assets` 文件夹与三个 HTML 文件的相对位置不变。
 
-论文页提供本地搜索和分类按钮。即使禁用 JavaScript，全部论文、站内导航及外部链接仍然可以阅读和使用。
+论文页展示预印本和已发表论文；全部论文、站内导航及外部链接无需 JavaScript 即可阅读和使用。
 
-## 2. 在 GitHub 上发布（网页操作）
+## 2. 在其他 GitHub 账户发布副本（网页操作）
 
 ### 第一步：创建仓库
 
@@ -40,8 +40,8 @@ publications.html
 teaching.html
 assets/
     site.css
-    site.js
     favicon.svg
+    siyaoyang.JPG
 .nojekyll
 README.md
 MIGRATION.md
@@ -85,7 +85,7 @@ https://你的GitHub用户名.github.io/
 
 在电脑和手机上检查首页、论文和教学栏目。也请使用实际中国大陆网络测试访问效果，再替换招生广告里的原主页地址。
 
-这个版本的 HTML、样式和脚本不依赖 Google 服务或外部 CDN；但没有在中国大陆网络中实测 GitHub Pages 的可达性，不能把“移除了 Google 依赖”等同于“所有网络下都能访问”。点击论文和机构链接后，外部网站仍需要自己的网络连接。
+这个版本的 HTML 和样式不依赖 Google 服务或外部 CDN；但没有在中国大陆网络中实测 GitHub Pages 的可达性，不能把“移除了 Google 依赖”等同于“所有网络下都能访问”。点击论文和机构链接后，外部网站仍需要自己的网络连接。
 
 ## 3. 后续更新
 
@@ -95,31 +95,14 @@ https://你的GitHub用户名.github.io/
 - 论文：编辑 `publications.html`，参照相邻的 `<li class="publication">` 条目添加。
 - 课程：编辑 `teaching.html`，参照相邻的 `<article class="course">` 条目添加。
 - 字体、颜色、间距、手机排版：编辑 `assets/site.css`。
-- 论文检索：`assets/site.js`；无需为了改论文文字而修改它。
 
-三个页面的侧栏是独立的静态 HTML。更换邮箱、职位、单位或照片时，请同步修改三个文件。
-
-论文页各部分标题旁的数量是静态数字；新增论文后要同步修改。搜索工具显示的匹配数量会自动计算。
+个人信息侧栏仅在首页。更换侧栏中的邮箱、职位、单位或照片时，修改 `index.html`；如需更改页眉或页脚信息，请同步修改三个页面。
 
 可以直接使用 GitHub 网页中的编辑按钮修改文件并提交。已启用按分支发布后，后续提交会触发站点更新。
 
-### 补上个人照片
+### 更换个人照片
 
-原 Google Sites 照片未成功下载。本包用 `SY` 字母标识代替，没有生成或替换为其他人的照片。
-
-把你本人的照片保存为 `assets/profile.jpg`。然后在三个 HTML 文件中查找 `<!-- PHOTO:` 注释，把下面的字母标识：
-
-```html
-<div class="monogram" aria-hidden="true">SY<span></span></div>
-```
-
-替换为：
-
-```html
-<img class="portrait" src="assets/profile.jpg" alt="Siyao Yang" width="120" height="120">
-```
-
-这样照片从你自己的站点加载，不再使用 Google 图片地址。若图片为 PNG，请同时修改文件名及 `src` 扩展名。
+首页侧栏使用 `assets/siyaoyang.JPG`。更换照片时，可以用同名文件替换；若使用不同文件名，请修改 `index.html` 中的 `src`。发布时请一同上传照片文件。
 
 ## 4. 常见问题
 
